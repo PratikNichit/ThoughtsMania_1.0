@@ -186,6 +186,7 @@ namespace ThoughtsMania_1._0
             this.BtnPost.TabIndex = 3;
             this.BtnPost.Text = "Post";
             this.BtnPost.UseVisualStyleBackColor = false;
+            this.BtnPost.Click += new System.EventHandler(this.BtnPost_Click);
             // 
             // Logo
             // 

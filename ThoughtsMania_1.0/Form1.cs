@@ -38,7 +38,7 @@ namespace ThoughtsMania_1._0
 
         private void BtnExplore_Click(object sender, EventArgs e)
         {
-            openChidForm(new Forms.FormExplore());
+            openChidForm(new Forms.FormExplore(panelDesktop));
         }
 
         private void BtnTrending_Click(object sender, EventArgs e)
@@ -54,6 +54,11 @@ namespace ThoughtsMania_1._0
         private void Logo_Click(object sender, EventArgs e)
         {
             openChidForm(new Forms.FormHomePage());
+        }
+
+        private void BtnPost_Click(object sender, EventArgs e)
+        {
+            openChidForm(new Forms.FormPost());
         }
     }
 }
