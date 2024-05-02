@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TextSubTitle = new System.Windows.Forms.TextBox();
             this.TextTitle = new System.Windows.Forms.Label();
             this.date_of_post = new System.Windows.Forms.Label();
@@ -37,8 +39,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnDot = new FontAwesome.Sharp.IconButton();
             this.BtnBookmark = new FontAwesome.Sharp.IconButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,6 +60,26 @@
             this.panel1.Size = new System.Drawing.Size(1114, 294);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ThoughtsMania_1._0.Properties.Resources.someone;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(77, 72);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ThoughtsMania_1._0.Properties.Resources.Screenshot_2024_04_29_231025;
+            this.pictureBox1.Location = new System.Drawing.Point(692, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(399, 277);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // TextSubTitle
             // 
@@ -156,26 +176,6 @@
             this.BtnBookmark.TabIndex = 8;
             this.BtnBookmark.UseVisualStyleBackColor = true;
             this.BtnBookmark.Click += new System.EventHandler(this.BtnBookmark_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ThoughtsMania_1._0.Properties.Resources.someone;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(77, 72);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ThoughtsMania_1._0.Properties.Resources.Screenshot_2024_04_29_231025;
-            this.pictureBox1.Location = new System.Drawing.Point(692, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(399, 277);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // CardPost
             // 

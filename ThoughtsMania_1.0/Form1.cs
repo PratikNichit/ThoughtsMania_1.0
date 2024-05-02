@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThoughtsMania_1._0.Forms;
+using ThoughtsMania_1._0.Models;
 
 namespace ThoughtsMania_1._0
 {
@@ -14,10 +16,12 @@ namespace ThoughtsMania_1._0
     {
         //fields
         private Form currentChildForm;
-        public Form1()
+        private User user;
+        public Form1(User user)
         {
             InitializeComponent();
             openChidForm(new Forms.FormHomePage());
+            this.user = user;
         }
 
         public void openChidForm(Form childForm)
@@ -43,12 +47,12 @@ namespace ThoughtsMania_1._0
 
         private void BtnTrending_Click(object sender, EventArgs e)
         {
-            openChidForm(new Forms.FormTrending());
+            openChidForm(new Forms.FormTrending(panelDesktop));
         }
 
         private void BtnProfile_Click(object sender, EventArgs e)
         {
-            openChidForm(new Forms.FormProfile());
+            openChidForm(new Forms.FormProfile(user,panelDesktop));
         }
 
         private void Logo_Click(object sender, EventArgs e)
@@ -58,7 +62,7 @@ namespace ThoughtsMania_1._0
 
         private void BtnPost_Click(object sender, EventArgs e)
         {
-            openChidForm(new Forms.FormPost());
+            openChidForm(new Forms.FormPost(user));
         }
     }
 }

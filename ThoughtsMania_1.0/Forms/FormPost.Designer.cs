@@ -38,8 +38,10 @@ namespace ThoughtsMania_1._0.Forms
             this.panel6 = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.LabelTitle = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.LabelTitle = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.SubTitle = new System.Windows.Forms.TextBox();
@@ -49,26 +51,24 @@ namespace ThoughtsMania_1._0.Forms
             this.BoldButton = new FontAwesome.Sharp.IconButton();
             this.Body = new System.Windows.Forms.RichTextBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.SelectImageButton = new FontAwesome.Sharp.IconButton();
             this.panel12 = new System.Windows.Forms.Panel();
             this.Topic = new System.Windows.Forms.ComboBox();
             this.LabelTopic = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.SelectImageButton = new FontAwesome.Sharp.IconButton();
             this.SaveImageButton = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel11.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -153,16 +153,23 @@ namespace ThoughtsMania_1._0.Forms
             this.panel2.Size = new System.Drawing.Size(750, 92);
             this.panel2.TabIndex = 8;
             // 
-            // LabelTitle
+            // panel14
             // 
-            this.LabelTitle.AutoSize = true;
-            this.LabelTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.LabelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTitle.Location = new System.Drawing.Point(0, 52);
-            this.LabelTitle.Name = "LabelTitle";
-            this.LabelTitle.Size = new System.Drawing.Size(97, 40);
-            this.LabelTitle.TabIndex = 1;
-            this.LabelTitle.Text = "Title : ";
+            this.panel14.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 51);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(750, 3);
+            this.panel14.TabIndex = 3;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.label1);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(750, 51);
+            this.panel13.TabIndex = 2;
             // 
             // label1
             // 
@@ -173,6 +180,17 @@ namespace ThoughtsMania_1._0.Forms
             this.label1.Size = new System.Drawing.Size(110, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Post";
+            // 
+            // LabelTitle
+            // 
+            this.LabelTitle.AutoSize = true;
+            this.LabelTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.LabelTitle.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTitle.Location = new System.Drawing.Point(0, 52);
+            this.LabelTitle.Name = "LabelTitle";
+            this.LabelTitle.Size = new System.Drawing.Size(97, 40);
+            this.LabelTitle.TabIndex = 1;
+            this.LabelTitle.Text = "Title : ";
             // 
             // panel4
             // 
@@ -289,6 +307,22 @@ namespace ThoughtsMania_1._0.Forms
             this.panel8.Size = new System.Drawing.Size(750, 322);
             this.panel8.TabIndex = 12;
             // 
+            // SelectImageButton
+            // 
+            this.SelectImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SelectImageButton.IconChar = FontAwesome.Sharp.IconChar.Image;
+            this.SelectImageButton.IconColor = System.Drawing.Color.Black;
+            this.SelectImageButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SelectImageButton.IconSize = 30;
+            this.SelectImageButton.Location = new System.Drawing.Point(250, 75);
+            this.SelectImageButton.Margin = new System.Windows.Forms.Padding(20, 3, 30, 3);
+            this.SelectImageButton.Name = "SelectImageButton";
+            this.SelectImageButton.Size = new System.Drawing.Size(152, 123);
+            this.SelectImageButton.TabIndex = 4;
+            this.SelectImageButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SelectImageButton.UseVisualStyleBackColor = true;
+            this.SelectImageButton.Click += new System.EventHandler(this.SelectImageButton_Click);
+            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
@@ -343,22 +377,6 @@ namespace ThoughtsMania_1._0.Forms
             this.panel11.Size = new System.Drawing.Size(750, 46);
             this.panel11.TabIndex = 0;
             // 
-            // SelectImageButton
-            // 
-            this.SelectImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SelectImageButton.IconChar = FontAwesome.Sharp.IconChar.Image;
-            this.SelectImageButton.IconColor = System.Drawing.Color.Black;
-            this.SelectImageButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SelectImageButton.IconSize = 30;
-            this.SelectImageButton.Location = new System.Drawing.Point(250, 75);
-            this.SelectImageButton.Margin = new System.Windows.Forms.Padding(20, 3, 30, 3);
-            this.SelectImageButton.Name = "SelectImageButton";
-            this.SelectImageButton.Size = new System.Drawing.Size(152, 123);
-            this.SelectImageButton.TabIndex = 4;
-            this.SelectImageButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SelectImageButton.UseVisualStyleBackColor = true;
-            this.SelectImageButton.Click += new System.EventHandler(this.SelectImageButton_Click);
-            // 
             // SaveImageButton
             // 
             this.SaveImageButton.Dock = System.Windows.Forms.DockStyle.Right;
@@ -393,24 +411,7 @@ namespace ThoughtsMania_1._0.Forms
             this.iconButton1.Text = "Upload Post";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.label1);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(750, 51);
-            this.panel13.TabIndex = 2;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 51);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(750, 3);
-            this.panel14.TabIndex = 3;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // FormPost
             // 
@@ -432,6 +433,8 @@ namespace ThoughtsMania_1._0.Forms
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -440,8 +443,6 @@ namespace ThoughtsMania_1._0.Forms
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel11.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

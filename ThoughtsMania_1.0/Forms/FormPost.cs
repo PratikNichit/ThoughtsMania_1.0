@@ -1,22 +1,33 @@
-﻿using System;
+﻿using Dapper;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
+using System.IO.Packaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using ThoughtsMania_1._0.Models;
+using static Google.Protobuf.Reflection.SourceCodeInfo.Types;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace ThoughtsMania_1._0.Forms
 {
     public partial class FormPost : Form
     {
-        public FormPost()
+        public User user;
+        public string path;
+        public FormPost(User user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -27,6 +38,7 @@ namespace ThoughtsMania_1._0.Forms
         private void FormPost_Load(object sender, EventArgs e)
         {
 
+            loadData();
         }
 
         private void BoldButton_Click(object sender, EventArgs e)
@@ -104,11 +116,48 @@ namespace ThoughtsMania_1._0.Forms
                 File.Copy(sourceFilePath, newFilePath);
 
                 // Show a message box with the new path of the saved image
+                path = newFilePath;
                 MessageBox.Show("Image saved successfully.\nNew path: " + newFilePath, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show("Please select an image first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void loadData()
+        {
+            using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
+            {
+                connection.Open();
+                var name = connection.Query<Topics>("SELECT topic_name from Topics;");
+                name = name.ToList();
+                List<string> list = new List<string>();
+                foreach (var value in name)
+                {
+                    list.Add(value.topic_name);
+                }
+
+                Topic.DataSource = list;
+            }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString))
+            {
+                connection.Open();
+                var parameters = new
+                {
+                    title = Title.Text,
+                    sub_title = SubTitle.Text,
+                    body = Body.Text,
+                    image_path = path,
+                    topic = Topic.Text,
+                    user_id = user.user_id
+                };
+                connection.Execute("thoughts_mania.insert_into_post", parameters, commandType: CommandType.StoredProcedure);
+                MessageBox.Show("Data Uploaded successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

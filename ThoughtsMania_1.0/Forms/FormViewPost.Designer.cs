@@ -34,20 +34,20 @@
             this.TextTitle = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.TextSubTitle = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.Profile_image = new System.Windows.Forms.PictureBox();
+            this.date_of_post = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.ImagePost = new System.Windows.Forms.PictureBox();
             this.body = new System.Windows.Forms.RichTextBox();
-            this.name = new System.Windows.Forms.Label();
-            this.date_of_post = new System.Windows.Forms.Label();
-            this.Profile_image = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.TextSubTitle = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Profile_image)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagePost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Profile_image)).BeginInit();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,6 +103,64 @@
             this.panel4.Size = new System.Drawing.Size(527, 189);
             this.panel4.TabIndex = 4;
             // 
+            // TextSubTitle
+            // 
+            this.TextSubTitle.BackColor = System.Drawing.Color.White;
+            this.TextSubTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextSubTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TextSubTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextSubTitle.Location = new System.Drawing.Point(0, 84);
+            this.TextSubTitle.Multiline = true;
+            this.TextSubTitle.Name = "TextSubTitle";
+            this.TextSubTitle.ReadOnly = true;
+            this.TextSubTitle.Size = new System.Drawing.Size(527, 105);
+            this.TextSubTitle.TabIndex = 1;
+            this.TextSubTitle.Text = "My name is Benoit. I have been a software engineer for the past eight and a half " +
+    "years. I stayed at my previous (and first) company for seven and a half years, t" +
+    "hen I joined a new one in early 2022.";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.Profile_image);
+            this.panel5.Controls.Add(this.date_of_post);
+            this.panel5.Controls.Add(this.name);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(527, 84);
+            this.panel5.TabIndex = 0;
+            // 
+            // Profile_image
+            // 
+            this.Profile_image.Image = global::ThoughtsMania_1._0.Properties.Resources.someone;
+            this.Profile_image.Location = new System.Drawing.Point(0, 6);
+            this.Profile_image.Name = "Profile_image";
+            this.Profile_image.Size = new System.Drawing.Size(77, 72);
+            this.Profile_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Profile_image.TabIndex = 10;
+            this.Profile_image.TabStop = false;
+            // 
+            // date_of_post
+            // 
+            this.date_of_post.AutoSize = true;
+            this.date_of_post.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_of_post.Location = new System.Drawing.Point(83, 38);
+            this.date_of_post.Name = "date_of_post";
+            this.date_of_post.Size = new System.Drawing.Size(123, 27);
+            this.date_of_post.TabIndex = 9;
+            this.date_of_post.Text = "date of post";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.Location = new System.Drawing.Point(83, 11);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(189, 27);
+            this.name.TabIndex = 8;
+            this.name.Text = "Name of the Writer";
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.ImagePost);
@@ -135,64 +193,6 @@
             this.body.TabIndex = 6;
             this.body.Text = resources.GetString("body.Text");
             // 
-            // name
-            // 
-            this.name.AutoSize = true;
-            this.name.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(83, 11);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(189, 27);
-            this.name.TabIndex = 8;
-            this.name.Text = "Name of the Writer";
-            // 
-            // date_of_post
-            // 
-            this.date_of_post.AutoSize = true;
-            this.date_of_post.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_of_post.Location = new System.Drawing.Point(83, 38);
-            this.date_of_post.Name = "date_of_post";
-            this.date_of_post.Size = new System.Drawing.Size(123, 27);
-            this.date_of_post.TabIndex = 9;
-            this.date_of_post.Text = "date of post";
-            // 
-            // Profile_image
-            // 
-            this.Profile_image.Image = global::ThoughtsMania_1._0.Properties.Resources.someone;
-            this.Profile_image.Location = new System.Drawing.Point(0, 6);
-            this.Profile_image.Name = "Profile_image";
-            this.Profile_image.Size = new System.Drawing.Size(77, 72);
-            this.Profile_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Profile_image.TabIndex = 10;
-            this.Profile_image.TabStop = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.Profile_image);
-            this.panel5.Controls.Add(this.date_of_post);
-            this.panel5.Controls.Add(this.name);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(527, 84);
-            this.panel5.TabIndex = 0;
-            // 
-            // TextSubTitle
-            // 
-            this.TextSubTitle.BackColor = System.Drawing.Color.White;
-            this.TextSubTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextSubTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TextSubTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextSubTitle.Location = new System.Drawing.Point(0, 84);
-            this.TextSubTitle.Multiline = true;
-            this.TextSubTitle.Name = "TextSubTitle";
-            this.TextSubTitle.ReadOnly = true;
-            this.TextSubTitle.Size = new System.Drawing.Size(527, 105);
-            this.TextSubTitle.TabIndex = 1;
-            this.TextSubTitle.Text = "My name is Benoit. I have been a software engineer for the past eight and a half " +
-    "years. I stayed at my previous (and first) company for seven and a half years, t" +
-    "hen I joined a new one in early 2022.";
-            // 
             // FormViewPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -212,11 +212,11 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ImagePost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Profile_image)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Profile_image)).EndInit();
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImagePost)).EndInit();
             this.ResumeLayout(false);
 
         }

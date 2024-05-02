@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Forms;
+using ThoughtsMania_1._0.Models;
 
 namespace ThoughtsMania_1._0.user_contols
 {
@@ -17,41 +18,114 @@ namespace ThoughtsMania_1._0.user_contols
         private Panel panelDesktop;
         private Form currentChildForm;
         private bool isPressed = false;
+        private CardData carddata;
         public CardPost()
         {
             InitializeComponent();
         }
 
-        public CardPost(Panel panelDesktop)
+        public CardPost(Panel panelDesktop, CardData carddata)
         {
             InitializeComponent();
             this.panelDesktop = panelDesktop;
+            this.carddata = carddata;
         }
 
         [Category("Extra Properties")]
-        private string WritersName { get; set;}
+        public string WritersName
+        {
+            get
+            {
+                return name.Text;
+            }
+            set
+            {
+                name.Text = value;
+            }
+        }
 
         [Category("Extra Properties")]
-        private DateTime dateOfPost {  get; set;}
+        public string dateOfPost
+        {
+            get
+            {
+                return date_of_post.Text.ToString();
+            }
+            set
+            {
+                date_of_post.Text = value;
+            }
+        }
 
         [Category("Extra Properties")]
-        private string profileImage {  get; set;}
+        public string profileImage
+        {
+            get
+            {
+                return pictureBox2.ImageLocation.ToString();
+            }
+            set
+            {
+                pictureBox2.ImageLocation = value;
+            }
+        }
 
         [Category("Extra Properties")]
-        private string title {  get; set;}
+        public string title
+        {
+            get 
+            {
+                return TextTitle.Text;
+            }
+            set
+            {
+                TextTitle.Text = value;
+            }
+        }
 
         [Category("Extra Properties")]
-        private string subtitle { get; set;}
+        public string subtitle
+        {
+            get
+            {
+                return TextSubTitle.Text;
+            }
+            set
+            {
+                TextSubTitle.Text = value;
+            }
+        }
 
         [Category("Extra Properties")]
-        private string topic { get; set;}
+        public string topic
+        {
+            get
+            {
+                return topicName.Text;
+            }
+            set
+            {
+                topicName.Text = value;
+            }
+        }
+
+
+        [Category("Extra Properties")]
+        public string post_image
+        {
+            get
+            {
+                return pictureBox1.ImageLocation.ToString();
+            }
+            set
+            {
+                pictureBox1.ImageLocation = value;
+            }
+        }
 
 
         private void CardPost_Load(object sender, EventArgs e)
-        {
-            string text = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \r\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.gg";
-
-            TextSubTitle.Text = text;
+        { 
             TextSubTitle.ScrollBars = ScrollBars.None; 
         }
 
@@ -77,7 +151,7 @@ namespace ThoughtsMania_1._0.user_contols
 
         private void BtnDot_Click(object sender, EventArgs e)
         {
-            openChidForm(new Forms.FormViewPost());
+            openChidForm(new Forms.FormViewPost(carddata));
         }
 
         public void openChidForm(Form childForm)

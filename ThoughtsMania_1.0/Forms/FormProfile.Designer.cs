@@ -146,6 +146,7 @@
             this.SaveData.Text = "Save All";
             this.SaveData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SaveData.UseVisualStyleBackColor = true;
+            this.SaveData.Click += new System.EventHandler(this.SaveData_Click);
             // 
             // TextName
             // 
@@ -221,6 +222,7 @@
             this.Profile_picture.Location = new System.Drawing.Point(6, 75);
             this.Profile_picture.Name = "Profile_picture";
             this.Profile_picture.Size = new System.Drawing.Size(264, 263);
+            this.Profile_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Profile_picture.TabIndex = 2;
             this.Profile_picture.TabStop = false;
             // 
@@ -294,9 +296,11 @@
             this.BtnMyPost.TabIndex = 0;
             this.BtnMyPost.Text = "Your Post";
             this.BtnMyPost.UseVisualStyleBackColor = false;
+            this.BtnMyPost.Click += new System.EventHandler(this.BtnMyPost_Click);
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(317, 499);
@@ -317,6 +321,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "FormProfile";
             this.Text = "FormProfile";
+            this.Load += new System.EventHandler(this.FormProfile_Load);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

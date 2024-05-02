@@ -83,6 +83,16 @@ namespace ThoughtsMania_1._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagess {
+            get {
+                object obj = ResourceManager.GetObject("imagess", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2024_04_29_231025 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2024-04-29 231025", resourceCulture);
@@ -96,6 +106,16 @@ namespace ThoughtsMania_1._0.Properties {
         internal static System.Drawing.Bitmap someone {
             get {
                 object obj = ResourceManager.GetObject("someone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_05_02_at_11_47_45_d8580553 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2024-05-02 at 11.47.45_d8580553", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

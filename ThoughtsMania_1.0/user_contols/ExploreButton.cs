@@ -1,20 +1,29 @@
-﻿using System;
+﻿using Dapper;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThoughtsMania_1._0.Models;
+using ThoughtsMania_1._0.user_contols;
 
 namespace ThoughtsMania_1._0.user_contols
 {
     public partial class ExploreButton : UserControl
     {
-        public ExploreButton()
+        public FlowLayoutPanel flowLayoutPanel;
+        public CardData data;
+        public ExploreButton(FlowLayoutPanel flowLayoutPanel,CardData data)
         {
             InitializeComponent();
+            this.flowLayoutPanel = flowLayoutPanel;
+            this.data = data;
         }
 
         [Category("Extra Properties")]
@@ -22,11 +31,11 @@ namespace ThoughtsMania_1._0.user_contols
         {
             get
             {
-                return topicName.ToString(); ;
+                return topicName;
             }
             set
             {
-                topicName = value.ToString();
+                topicName = value;
             }
         }
 
@@ -39,8 +48,12 @@ namespace ThoughtsMania_1._0.user_contols
             }
             set
             {
-                button.Text = value.ToString();
+                button.Text = value;
             }
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
         }
     }
 }
